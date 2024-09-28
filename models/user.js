@@ -28,8 +28,8 @@ const User = sequelize.define('User', {
         type: DataTypes.DATEONLY,
         allowNull: true
     },
-    id_or_passport: {
-        type: DataTypes.STRING(20),
+    national_id_number: {
+        type: DataTypes.STRING(11),
         allowNull: true
     },
     created_at: {
