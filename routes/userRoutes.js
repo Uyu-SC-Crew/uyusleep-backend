@@ -16,4 +16,10 @@ router.post('/users/verify', userController.verifyCode);
 // Kullanıcı bilgilerini kaydeden API 
 router.post('/users/save-details', verifyToken, userController.saveUserDetails);
 
+// Kullanıcı profilini getiren API
+router.get('/users/profile', verifyToken, userController.getUserProfile);
+
+// Refresh Token ile JWT yenileme API
+router.post('/users/refresh-token', userController.refreshAccessToken);
+
 module.exports = router;
